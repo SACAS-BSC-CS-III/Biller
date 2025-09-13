@@ -56,44 +56,34 @@
   .total-row{font-weight:700;font-size:16px}
   .footer-note{margin-top:14px;text-align:center;color:var(--muted);font-size:13px}
 
-  /* Print-specific styles */
  @media print {
   body { background:white }
-
-  /* hide interactive parts */
   .controls, .no-print { display: none !important; }
-
-  /* show invoice only during print */
   .invoice-preview { 
     display: block !important; 
-    font-size: 12px;      /* smaller base font */
-    line-height: 1.2;     /* tighter line spacing */
+    font-size: 12px;    
+    line-height: 1.2;   
   }
 
   .container { box-shadow:none; border-radius:0; margin:0; padding:0 }
 
   @page { size: A5 portrait; margin: 6mm; }
-
-  /* shrink table cells */
   .invoice-preview .print-table th,
   .invoice-preview .print-table td { 
     border:1px solid #333; 
-    padding:4px;          /* smaller padding */
-    font-size: 11px;      /* smaller table text */
+    padding:6px;
+    font-size: 14px;
   }
-
-  /* header smaller too */
   .inv-header h2 { 
-    font-size:16px; 
+    font-size:40px; 
     font-weight:700; 
     text-align:center; 
+    padding-bottom: 5px;
   }
-
-  .inv-header .addr { font-size: 11px; }
+  .inv-header .addr { font-size: 11px; padding-bottom: 5px;}
   .inv-meta, .inv-customer { font-size: 11px; }
   .footer-note { font-size: 10px; margin-top:8px; }
 }
-
 
 
   /* Small responsive */
@@ -415,4 +405,5 @@
 </script>
 </body>
 </html>
+
 
