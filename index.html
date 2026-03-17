@@ -300,11 +300,11 @@
     let amountFinal = null;
 
     // If both rate and qty provided => calc
-    if (rate != null && qty != null) {
-      amountFinal = rate * qty;
-    } else if (amountManual != null) {
+    if (amountManual != null) {
       // amount explicitly provided by user
       amountFinal = amountManual;
+    } else if (rate != null && qty != null) {
+      amountFinal = rate * qty;
     } else if (rate != null && (qty == null || qty === 0)) {
       // assume qty = 1 if qty missing or zero
       amountFinal = rate * 1;
